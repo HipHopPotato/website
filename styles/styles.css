@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Homepage Specific Styles */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f0f0f0;
+}
+
+/* Store Page Specific Styles */
+.store {
+    padding: 2rem;
+}
+
+/* About Page Specific Styles */
+.about {
+    padding: 2rem;
+}
+
+/* Appointment Page Specific Styles */
+.booking {
+    padding: 2rem;
+}
+/* Feedback Link Section Specific Styles */
+.feedback-link {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feedback-link a {
+    color: #333;
+    text-decoration: underline;
+}
