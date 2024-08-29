@@ -16,10 +16,17 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="appointments.html">Book Appointment</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <!-- Background Audio -->
+    <audio id="bgAudio" loop>
+        <source src="audio/love.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <section class="hero">
         <h2>Your Experts in Window Tinting and Radio Installation</h2>
         <p>Explore our services and book your appointment today!</p>
@@ -35,12 +42,14 @@
             <h3>Now Offering Custom Radio Installs</h3>
             <p>We now provide custom radio installation services tailored to your vehicle.</p>
         </div>
-        <!-- Add more feed items as needed -->
     </section>
 
     <section class="feedback-link">
-        <p>Have feedback for us? <a href="feedback.html">Leave your feeeedback here</a>.</p>
+        <p>Have feedback for us? <a href="feedback.html">Leave your feedback here</a>.</p>
     </section>
+
+    <!-- JavaScript for Continuous Audio -->
+    <script src="scripts/audioControl.js"></script>
 
     <footer>
         <p>&copy; 2024 Window Tinting & Radio Installation Business. All rights reserved.</p>

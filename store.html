@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Our Store</h1>
+        <h1>Our Products</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -16,17 +16,43 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="appointments.html">Book Appointment</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
     </header>
+    /audio/02 Master of Puppets.mp3
+    /scripts/audioControl.js
+    /index.html
+    /store.html
+    /about.html
+    ...
+       <audio id="bgAudio" loop>
+        <source src="audio/love.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     
-    <section class="store">
-        <h2>Explore Our Products and Services</h2>
-        <!-- Include products/services information here -->
+    <section class="store-items">
+        <div class="store-item">
+            <img src="images/window-tint.jpg" alt="Window Tint">
+            <h3>Window Tint</h3>
+            <p>Price: $150.00</p>
+            <button onclick="addToCart({ id: 1, name: 'Window Tint', price: 150, image: 'images/window-tint.jpg' })">Add to Cart</button>
+        </div>
+        <div class="store-item">
+            <img src="images/radio-install.jpg" alt="Radio Installation">
+            <h3>Radio Installation</h3>
+            <p>Price: $200.00</p>
+            <button onclick="addToCart({ id: 2, name: 'Radio Installation', price: 200, image: 'images/radio-install.jpg' })">Add to Cart</button>
+        </div>
+        <!-- Add more store items as needed -->
     </section>
 
     <footer>
         <p>&copy; 2024 Window Tinting & Radio Installation Business. All rights reserved.</p>
     </footer>
+        <!-- JavaScript for Continuous Audio -->
+        <script src="scripts/audioControl.js"></script>
+
+        <script src="scripts/cart.js"></script>
 </body>
 </html>
