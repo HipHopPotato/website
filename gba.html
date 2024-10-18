@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBA Emulator</title>
+  <script src="scripts/js/gba.js"></script> <!-- Ensure this is correct -->
+  <style>
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Play GBA Game</h1>
+  <canvas id="gba-canvas" width="240" height="160"></canvas> <!-- Adjust canvas size -->
+
+  <script>
+    // Initialize the GBA emulator
+    const gba = new GameBoyAdvance();
+    gba.setCanvas(document.getElementById('gba-canvas'));
+
+    // Function to load the ROM from the server and run it
+    function loadRom(url) {
+    console.log(`Attempting to load ROM from: ${url}`); // Log URL
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.arrayBuffer();
+        })
+        .then(data => {
+            console.log('ROM loaded successfully, initializing...'); // Log success
+            gba.loadRomFromFile(new Uint8Array(data));
+            gba.runStable(); // Start running the game
+        })
+        .catch(error => console.error('Error loading ROM:', error));
+}
+
+
+    // Automatically load and run the ROM from the server
+    window.onload = function() {
+      loadRom('roms/game.gba'); // Check this path
+
+    };
+  </script>
+</body>
+</html>
